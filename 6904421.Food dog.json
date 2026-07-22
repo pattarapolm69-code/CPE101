@@ -1,0 +1,220 @@
+[{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb369"
+  },
+  "productId": 1,
+  "productName": "Royal Canin Mini Adult",
+  "brand": "Royal Canin",
+  "category": "Adult",
+  "weight": "2kg",
+  "age": "Adult",
+  "price": 790,
+  "stock": 20,
+  "rating": 4.8,
+  "reviewCount": 120,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb36a"
+  },
+  "productId": 2,
+  "productName": "Pedigree Beef",
+  "brand": "Pedigree",
+  "category": "Adult",
+  "weight": "3kg",
+  "age": "Adult",
+  "price": 350,
+  "stock": 35,
+  "rating": 4.5,
+  "reviewCount": 98,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb36b"
+  },
+  "productId": 3,
+  "productName": "SmartHeart Puppy",
+  "brand": "SmartHeart",
+  "category": "Puppy",
+  "weight": "3kg",
+  "age": "Puppy",
+  "price": 420,
+  "stock": 30,
+  "rating": 4.7,
+  "reviewCount": 86,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb36c"
+  },
+  "productId": 4,
+  "productName": "Hill's Science Diet",
+  "brand": "Hill's",
+  "category": "Adult",
+  "weight": "2kg",
+  "age": "Adult",
+  "price": 1250,
+  "stock": 15,
+  "rating": 4.9,
+  "reviewCount": 67,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb36d"
+  },
+  "productId": 5,
+  "productName": "Purina Pro Plan",
+  "brand": "Purina",
+  "category": "Adult",
+  "weight": "2.5kg",
+  "age": "Adult",
+  "price": 980,
+  "stock": 18,
+  "rating": 4.8,
+  "reviewCount": 74,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb36e"
+  },
+  "productId": 6,
+  "productName": "Taste of the Wild",
+  "brand": "Taste of the Wild",
+  "category": "Grain Free",
+  "weight": "5kg",
+  "age": "Adult",
+  "price": 1450,
+  "stock": 12,
+  "rating": 4.9,
+  "reviewCount": 55,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb36f"
+  },
+  "productId": 7,
+  "productName": "Orijen Original",
+  "brand": "Orijen",
+  "category": "All Life Stage",
+  "weight": "6kg",
+  "age": "All",
+  "price": 2350,
+  "stock": 8,
+  "rating": 5,
+  "reviewCount": 45,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb370"
+  },
+  "productId": 8,
+  "productName": "Acana Puppy",
+  "brand": "Acana",
+  "category": "Puppy",
+  "weight": "6kg",
+  "age": "Puppy",
+  "price": 1750,
+  "stock": 10,
+  "rating": 4.9,
+  "reviewCount": 38,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb371"
+  },
+  "productId": 9,
+  "productName": "Nature Bridge Lamb",
+  "brand": "Nature Bridge",
+  "category": "Adult",
+  "weight": "3kg",
+  "age": "Adult",
+  "price": 690,
+  "stock": 25,
+  "rating": 4.6,
+  "reviewCount": 41,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a59a10e015981a2214bb372"
+  },
+  "productId": 10,
+  "productName": "JerHigh Chicken",
+  "brand": "JerHigh",
+  "category": "Snack",
+  "weight": "100g",
+  "age": "All",
+  "price": 120,
+  "stock": 100,
+  "rating": 4.7,
+  "reviewCount": 156,
+  "status": "active",
+  "createdAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+}]
