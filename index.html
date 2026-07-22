@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEBUG ARCADE — CPE101 Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo">🎮 DEBUG ARCADE</a>
+    <nav class="nav-links">
+      <a href="#game">Debug Rush</a>
+      <a href="#quests">Quest Log</a>
+      <a href="#character">Character</a>
+      <a href="#guild">Guild</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="สลับธีมสี">
+      <span class="dot"></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section id="home" class="hero">
+    <div class="hero-grid">
+      <div class="cabinet">
+        <div class="cabinet-glow"></div>
+        <div class="cabinet-screen">
+          <p class="marquee">CPE101 WORKSHOP</p>
+          <h1 class="pixel-title">DEBUG<br>ARCADE</h1>
+          <div class="boot-log" id="bootLog"></div>
+          <a href="#game" class="btn btn-primary press-start">▶ PRESS START</a>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="eyebrow">Level 1 · Front-end Dungeon</p>
+        <h2>เว็บไซต์ตัวอย่างแนวเกม<br><span class="accent">HTML + CSS + JS</span></h2>
+        <p class="lead">หน้าเดียว ครบสามภาษา จัดธีมเป็นตู้อาร์เคดของนักศึกษา CPE มีเกมให้เล่นจริง มีเควสให้ล้าง มีตัวคำนวณพลัง ลองกดเล่นได้ทุกส่วนเลย</p>
+        <div class="hero-actions">
+          <a href="#game" class="btn btn-primary">เข้าเกม Debug Rush</a>
+          <a href="#character" class="btn btn-ghost">คำนวณ Power Level</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="game" class="game reveal">
+    <p class="eyebrow">Boss Fight</p>
+    <h2 class="pixel-heading">DEBUG RUSH</h2>
+    <p class="section-lead">บั๊กโผล่ขึ้นมาแบบสุ่มบนกระดาน กดให้ไวที่สุดก่อนมันหนีไป มี 20 วินาทีต่อรอบ ตั้งเป้าทำคอมโบให้ยาว ๆ</p>
+
+    <div class="game-card">
+      <div class="game-hud">
+        <div class="hud-stat"><span class="hud-label">SCORE</span><span class="hud-value" id="score">0</span></div>
+        <div class="hud-stat"><span class="hud-label">COMBO</span><span class="hud-value" id="combo">0</span></div>
+        <div class="hud-stat"><span class="hud-label">TIME</span><span class="hud-value" id="timeLeft">20</span></div>
+        <div class="hud-stat"><span class="hud-label">BEST</span><span class="hud-value" id="bestScore">0</span></div>
+      </div>
+      <div class="game-board" id="gameBoard"></div>
+      <div class="game-controls">
+        <button id="gameStart" class="btn btn-primary">เริ่มเกม</button>
+        <p class="game-status" id="gameStatus">กด "เริ่มเกม" เพื่อปล่อยบั๊กออกมา</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quests" class="quests reveal">
+    <p class="eyebrow">Side Quests</p>
+    <h2 class="pixel-heading">QUEST LOG</h2>
+    <p class="section-lead">พิมพ์เควสที่ต้องทำสำหรับเวิร์กช็อปนี้ ล้างเควสเพื่อรับ XP ระบบจำค่าไว้ให้แม้ปิดหน้าเว็บ</p>
+    <div class="quest-card">
+      <div class="xp-bar-wrap">
+        <div class="xp-label"><span>XP</span><span id="xpText">0 / 100</span></div>
+        <div class="xp-bar"><div class="xp-fill" id="xpFill"></div></div>
+      </div>
+      <div class="todo-input-row">
+        <input id="todoInput" type="text" placeholder="เช่น อัปโหลดไฟล์ขึ้น Google Drive" maxlength="80">
+        <button id="todoAdd" class="btn btn-primary">รับเควส</button>
+      </div>
+      <ul id="todoList" class="todo-list"></ul>
+      <div class="todo-footer">
+        <span id="todoCount">ยังไม่มีเควส</span>
+        <button id="todoClear" class="btn-link">ล้างเควสที่จบแล้ว</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="character" class="character reveal">
+    <p class="eyebrow">Character Sheet</p>
+    <h2 class="pixel-heading">POWER LEVEL</h2>
+    <p class="section-lead">ใส่วิชาที่เรียน (เควสสายเอก) หน่วยกิต (ความยาก) และเกรดที่คาดว่าจะได้ (แรงค์ผ่านด่าน) แล้วกดคำนวณพลัง</p>
+    <div class="gpa-card">
+      <div id="gpaRows" class="gpa-rows"></div>
+      <button id="gpaAddRow" class="btn-link">+ เพิ่มด่าน</button>
+      <div class="gpa-result-row">
+        <button id="gpaCalc" class="btn btn-primary">คำนวณพลัง</button>
+        <div class="gpa-result" id="gpaResult">PWR —</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guild" class="contact reveal">
+    <p class="eyebrow">Guild Hall</p>
+    <h2 class="pixel-heading">JOIN THE GUILD</h2>
+    <p class="section-lead">ฝากข้อความถึงกิลด์ ฟอร์มนี้ตรวจความถูกต้องด้วย JavaScript ฝั่งเบราว์เซอร์ ยังไม่ได้เชื่อมเซิร์ฟเวอร์จริง</p>
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="field">
+        <label for="name">ชื่อผู้เล่น</label>
+        <input id="name" name="name" type="text" placeholder="ชื่อของคุณ">
+        <span class="error" id="nameError"></span>
+      </div>
+      <div class="field">
+        <label for="email">อีเมลติดต่อ</label>
+        <input id="email" name="email" type="text" placeholder="you@example.com">
+        <span class="error" id="emailError"></span>
+      </div>
+      <div class="field">
+        <label for="message">ข้อความถึงกิลด์</label>
+        <textarea id="message" name="message" rows="4" placeholder="เขียนอะไรถึงเราสักหน่อย..."></textarea>
+        <span class="error" id="messageError"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>สร้างด้วย HTML, CSS และ JavaScript — CPE101 Workshop</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
